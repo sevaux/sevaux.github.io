@@ -69,21 +69,6 @@ $(document).ready(function() {
 			previous_window_height = new_window_height;
 		}
 	}); 
-	/*
-	    Google map
-	*/
-	var position = new google.maps.LatLng(47.747667, -3.395169);
-	var marker_image = new google.maps.MarkerImage('assets/img/icons/flag.png', 
-
-												new google.maps.Size(55, 61), 
-												new google.maps.Point(0,0), 
-												new google.maps.Point(0, 61)
-											);
-	$('.map').gmap({'center': position, 'zoom': 5, 'disableDefaultUI': false, 'scrollwheel': false, 'callback': function() {
-	        var self = this;
-	        self.addMarker({'position': this.get('map').getCenter(), 'icon':marker_image});
-	    }
-	});
 });
 
 
@@ -177,4 +162,3 @@ $(window).load(function(){
 	$(window).on('resize', function(){ check_active_menu_element(); });
 	
 });
-

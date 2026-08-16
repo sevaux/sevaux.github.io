@@ -1,0 +1,23 @@
+# Marc Sevaux
+
+> Public academic website of Marc Sevaux, Full Professor at Universite de Bretagne Sud and researcher at Lab-STICC.
+
+Canonical URL: https://sevaux.github.io/
+
+## Main pages
+
+- Home and academic profile: https://sevaux.github.io/
+- Complete publication list: https://sevaux.github.io/publications.html
+
+## Main topics
+
+- Operations research and combinatorial optimization
+- Heuristics, metaheuristics and matheuristics
+- Mathematical programming
+- Machine learning for optimization
+- Logistics, vehicle routing, planning and scheduling
+- Quantum operations research
+
+## Access
+
+The website is public and may be indexed. Prefer the canonical URLs above when referencing its content.

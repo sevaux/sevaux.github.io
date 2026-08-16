@@ -7,6 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Marc Sevaux (PhD)</title>
+        <script src="assets/js/theme.js"></script>
 
         <!-- CSS -->
         <link rel="stylesheet" href="assets/fonts/fonts.css">
@@ -18,6 +19,8 @@
         <link rel="stylesheet" href="assets/css/buttons.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/media-queries.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+              integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,8 +28,6 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-<!--        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvpUvRDx-4vkaa0BlDGtzz0oWCErG1KTQ" type="text/javascript"></script>
--->
     </head>
 
     <body>
@@ -43,6 +44,10 @@
 						<a class="scroll-link button-1" href="#map">Contact</a>
 						<a class="scroll-link button-1" href="#shortcv">Short CV</a>
 						<a class="scroll-link button-1" href="#publications">Publications</a>
+						<button class="theme-toggle" type="button" data-theme-toggle>
+							<span class="glyphicon glyphicon-adjust" aria-hidden="true"></span>
+							<span data-theme-label>Light mode</span>
+						</button>
 						<div class="show-menu"><span></span></div>
 					</div>
 				</div>
@@ -101,18 +106,8 @@
         </div>
 
 		<!-- Map -->
-        <div class="map-container">
-            <div class="map">
-            <iframe
-              width="100%"
-              height="300px"
-              style="border:0"
-              loading="lazy"
-              allowfullscreen
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA8gFkNkkb1AoIFzgOxm0osKVB5Cc8goyI&q=Lab-STICC,Lorient+France">
-            </iframe>
-            </div>
+	        <div id="map" class="map-container">
+	            <div id="location-map" class="map" role="application" aria-label="Location of Lab-STICC in Lorient"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 address-container">
@@ -127,8 +122,7 @@
                     </div>
                 </div>
             </div>
-        </div>         <div id="map" class="map-container">
-	        <div class="map"></div>
+	        </div>
 
 		<!-- Short CV -->
         <div id="shortcv" class="shortcv-container">
@@ -137,8 +131,8 @@
 	                <div class="col-sm-12 shortcv">
 	                    <h2>Short CV</h2>
 	                </div>
-                    <div class="row">
-	                    <div class="col-md-6">
+	                    <div class="row shortcv-row">
+		                    <div class="col-md-6">
 	                    	<div class="shortcv-box">
 		                    	<div class="shortcv-box-text">
 		                    		<h3>Positions</h3>
@@ -166,8 +160,8 @@
 						    </div>
 	                    </div>
                     </div>
-                    <div class="row">
-	                    <div class="col-md-6">
+	                    <div class="row shortcv-row">
+		                    <div class="col-md-6">
 	                    	<div class="shortcv-box">
 		                    	<div class="shortcv-box-text">
 		                    			                    		<h3>Responsibilities</h3>
@@ -192,7 +186,7 @@
 							    </div>
 						    </div>
 	                    </div>
-	                    <div class="col-nd-6">
+	                    <div class="col-md-6">
 	                    	<div class="shortcv-box">
 		                    	<div class="shortcv-box-text">
                             	<h3>Teaching</h3>
@@ -213,7 +207,7 @@
 						    </div>
 	                    </div>
                     </div>
-                    <div class="row">
+	                    <div class="row shortcv-row">
 	                    <div class="col-sm-12">
 	                    	<div class="shortcv-box">
 		                    	<div class="shortcv-box-text">
@@ -261,7 +255,6 @@
 	            </div>
 
 <iframe class="frame" seamless="seamless" frameborder="0" scrolling="yes" id="iframe"
-  onload="javascript:resizeIframe(this);"
   src="https://haltools.archives-ouvertes.fr/Public/afficheRequetePubli.php?idHal=marc-sevaux&typdoc=(%27ART%27,%27OUV%27,%27COUV%27,%27DOUV%27)&NbAffiche=10&CB_ref_biblio=oui&CB_identifiant=oui&langue=Anglais&tri_exp=annee_publi&ordre_aff=AT&Fen=Aff&css=../css/VisuCondenseSsCadre.css" style="height: 1000px;"></iframe>
 
 	        </div>
@@ -272,7 +265,7 @@
 	        <div class="container">
 	            <div class="row">
 	                <div class="col-sm-12 footer">
-	                	<div class="footer-center">© M. Sevaux - Many thanks to A. Olteanu for his help on creating this page</div>
+                            <div class="footer-center">Copyright M. Sevaux 2026</div>
 	                </div>
 	            </div>
 	        </div>
@@ -283,12 +276,14 @@
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="assets/js/jquery.backstretch.min.js"></script>
         <script src="assets/js/masonry.pkgd.min.js"></script>
-        <script src="assets/js/jquery.ui.map.min.js"></script>
         <script src="https://a.vimeocdn.com/js/froogaloop2.min.js"></script>
         <script src="assets/js/select2.min.js"></script>
         <script src="assets/js/jquery.gray.min.js"></script>
         <script src="assets/js/jquery.magnific-popup.min.js"></script>
         <script src="assets/js/scripts.js"></script>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+                integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <script src="assets/js/map.js"></script>
         <script src="assets/js/retina-1.1.0.min.js"></script>
 		<!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>

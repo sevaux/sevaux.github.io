@@ -123,6 +123,7 @@
 	.address .address-box-social { margin-top: 15px; }
 	.map-container { min-height: 480px; }
     .map { height: 480px; }
+    .shortcv-container .shortcv-row { margin-left: 0; margin-right: 0; }
 	
 	.contact-us p { padding: 0; }
 	.contact-us-form form .contact-us-form-left { float: none; width: auto; }
@@ -180,4 +181,3 @@
     }
     
 }
-
