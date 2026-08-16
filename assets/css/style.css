@@ -93,18 +93,23 @@ nav .nav-logo a {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	gap: 7px;
-	height: 38px;
-	margin: 2px 0 0 8px;
-	padding: 0 12px;
+	width: 34px;
+	height: 34px;
+	margin: 4px 0 0 10px;
+	padding: 0;
 	border: 1px solid #66717c;
 	border-radius: 4px;
 	background: var(--control-bg);
 	color: #fff;
-	font-family: 'signikaregular', sans-serif;
-	font-size: 15px;
+	font-family: Georgia, serif;
+	font-size: 23px;
 	line-height: 1;
 	vertical-align: top;
+}
+
+.theme-toggle-icon {
+	display: block;
+	transform: translateY(-1px);
 }
 
 .theme-toggle:hover,
