@@ -1,0 +1,31 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.61 [en] (X11; I; Linux 2.2.12-20 i686) [Netscape]">
+   <title> Tools and links for UBS </title>
+   <link rel=stylesheet type="text/css" href="eume-style.css">
+</head>
+<body bgcolor="#FFFFFF">
+    
+<h2>Procedure pour se connecter depuis l'extérieur</h2>
+
+
+- dans une fenetre (a laisser ouverte) : <br>
+
+<code>ssh -L 2222:bof.univ-ubs.fr:22 sevaux@transit.univ-ubs.fr</code><br>
+
+<br>
+- dans une autre fenetre :
+<br>
+
+<code>ssh -p 2222 -CX localhost</code> puis <br>
+<code>ssh petitsevaux@ens-dsiva-0020.ens.univ-ubs.fr</code><br>
+
+<br>
+ou en une seule fois (a verifier) :<br>
+
+<code>
+  ssh -J localhost:2222 petitsevaux@ens-dsiva-0020.ens.univ-ubs.fr</code><br>
+</body>
+</html>

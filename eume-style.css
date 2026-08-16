@@ -1,0 +1,45 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #202124;
+  background: #fff;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  overflow-wrap: anywhere;
+}
+
+a {
+  color: #075bb5;
+}
+
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 6px 8px;
+  vertical-align: top;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 16px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
